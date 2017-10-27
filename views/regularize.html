@@ -1,0 +1,282 @@
+<style type="text/css">
+  body{
+    background: #f5f5f5
+
+  }
+     .logo_hd{
+      width: 31px;
+    margin: auto;
+    /* top: 14px; */
+    margin-top: 11px;
+    padding-left: 0px;
+     }
+
+     .logo_div{
+      padding:0px 30px;
+     }
+ .white-text{
+      font-family:inherit !important;
+      color: #ffffff !important;
+      font-family: 'Roboto', sans-serif !important;
+     }
+     .user_header{
+     height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: red;
+    position: relative;
+    left: 16px;
+    background: url(img/3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+     }
+.nvt-wew{
+  padding: 0px 10px;
+    font-size: 17px;
+    font-family: inherit;
+    font-weight: 400;
+}
+.card-vew{
+    background: #ffffff;
+    padding: 6px 10px;
+    margin: 2px 9px;
+    border-radius:6px;
+    /* border: 1px solid black; */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+ 
+.right_ving{
+      display: inline-block;
+    float: left;
+    padding-top: 7px;
+    padding-left: 12px;
+}
+.right_ving_rt{
+    display: inline-block;
+    float:right;
+    padding-top: 7px;
+    padding-right: 12px;
+}
+
+.right_ving>span:nth-child(1),.bg-img>p> span:nth-child(1){
+  color: black;
+  font-family: 'PT Serif', serif;
+  font-weight: lighter;
+}
+.right_ving>span:nth-child(2),.bg-img>p> span:nth-child(2){
+   
+  font-family: 'PT Serif', serif;
+   font-weight: lighter;
+}
+.bg-img_br:after{
+height: 0;
+display: block;
+content: "";
+clear: both;
+}
+
+.boredr-bot{
+  border-bottom: 0.5px solid #b0b0b0; 
+}
+
+.new_join{
+  background-image: none;
+}
+ 
+.user_nm{
+   font-family: 'PT Serif', serif;
+   font-weight: bold;
+}
+
+.lty{
+  padding: 4px 16px;
+}
+
+.retway{
+padding: 3px 12px; 
+ }
+
+ .under_lin{
+  padding: 5px;
+  
+ }
+.under_lin>p:nth-child(1){
+ color: #828282;
+    border-bottom: 1px solid black;
+    width: 64px;
+    font-family: 'Roboto', sans-serif;
+
+ }
+ .under_lin>p:nth-child(2){
+  border-bottom: 1px solid #6d6d6d;
+  padding-bottom: 3px;
+  color: black;
+ }
+.sec_one{
+  display: inline-block;
+  width: 48%;
+}
+
+textarea.materialize-textarea {
+     overflow-y: hidden;
+    padding: 4px 6px;
+    resize: none;
+    width: 98%;
+    min-height: 3rem;
+    font-weight: lighter;
+    border: none;
+    border-bottom: 0.5px solid black;
+    outline: none;
+}
+
+.under_lin>p:nth-child(2)>input{
+  border:none; 
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.srh-end{
+      padding: 7px;
+    text-align: center;
+    margin: 4%;
+    background: #03547f;
+    border-radius:6px;
+    color: white;
+    font-size:22px;
+   font-family: 'Roboto', sans-serif;
+}
+
+input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    width: 92%;
+}
+#sidenav-overlay {
+    position:inherit;
+    height: 0vh;
+     background-color: rgba(0,0,0,0) !important; 
+    z-index:1;
+    will-change: opacity;
+}
+
+#alertmessage{
+  background-color: rgba(16, 16, 16, 0.7);
+  max-width: 290px;
+    top: 60%;
+    left: 25%;
+
+    z-index: 1100;
+    display: inline-block;
+    position: absolute;
+    padding: 10px;
+    outline: 0;
+    border-radius: 10px;
+    padding-top: 15px;
+}
+
+#alertmessage div{
+  
+    border-color: #ddd;
+    color: white;
+  
+}
+
+  </style>
+  
+ <div id="alertmessage" ng-show="showalert">
+    <div><p>{{alertmessage}}</p></div>
+  </div>
+        
+    <!-- Main Container -->
+    <div  class="main">
+
+      <!-- Toolbar -->
+      <div id="toolbar" class="transparent">
+        <div class="open-left" id="open-left" data-activates="slide-out-left" ng-click="goHome()">
+          <i class="ion-android-arrow-back white-text"></i>
+        </div>
+        <div class="logo_div"><img  class="logo_hd" src="img/logo.png"></div>
+        <div><h1 class="title white-text">Regularize</h1></div>
+      </div>
+      <!-- End of Toolbar -->
+ 
+       <div class="animated fadeinup" style="padding-top:59px;">
+      <div class="todo-element card-vew" >
+          
+  <form ng-submit="submitRegularize()">
+         <div ng-repeat="dtlog in datelog">
+           <div class="under_lin sec_one">
+             <p>In Date</p>
+              <input class="datepicker" type="date" placeholder="{{dtlog}}" ng-model="datein[$index]">
+           </div>
+
+           <div class="under_lin sec_one">
+             <p>In Time</p>
+              <input class="timepicker" type="text" value="00:00" ng-model="intime[$index]">
+           </div>
+
+          <div style="clear: both;display: block;"></div>
+
+          <div class="under_lin sec_one">
+             <p>Out Date</p>
+              <input class="datepicker" type="date" placeholder="{{dtlog}}" ng-model="dateout[$index]">
+          </div>
+           <div class="under_lin sec_one">
+             <p>Out Time</p>
+              <input class="timepicker" type="text" value="00:00" ng-model="outtime[$index]">
+           </div>
+   
+            <div class="input-field under_lin">
+              <textarea placeholder="Comments" ng-model="message[$index]" class="materialize-textarea" data-length="120"></textarea>
+          </div>
+
+
+            <script type="text/javascript">
+
+                $('.timepicker').clockpicker({
+                  placement: 'bottom',
+                  align: 'left',
+                  darktheme: true,
+                  twelvehour: false
+                });
+
+                  $('.datepicker').pickadate({format: 'mm/dd/yyyy'});
+
+            </script> 
+         </div>
+
+         <input type="submit" class="srh-end" name="" value="Regularize">
+         
+    <!-- <div class="srh-end"> Regularise</div> -->
+    
+    
+
+    </form>
+
+   
+    </div>
+      </div> 
+
+
+    </div>
+    <!-- End of Main Container -->
+    
+    <!-- Scripts -->
+
+    <script type="text/javascript">
+
+        $('.timepicker').clockpicker({
+          placement: 'bottom',
+          align: 'left',
+          darktheme: true,
+          twelvehour: false
+        });
+
+          $('.datepicker').pickadate();
+
+
+      
+    </script>
+ 
+  

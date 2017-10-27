@@ -1,0 +1,248 @@
+
+  <style type="text/css">
+   body{
+     background: #f5f5f5;
+     font-family: 'PT Serif', serif;
+     overflow-x: none;
+     -webkit-overflow-x: none;
+
+   }
+      .logo_hd{
+       width: 31px;
+     margin: auto;
+     /* top: 14px; */
+     margin-top: 11px;
+     padding-left: 0px;
+      }
+
+      .logo_div{
+       padding:0px 30px;
+      }
+      .white-text{
+       font-family:inherit !important;
+      }
+  .nvt-wew{
+   padding: 0px 10px;
+     font-size: 17px;
+     font-family: inherit;
+     font-weight: 400;
+  }
+  .card-vewer{
+     background: #ffffff;
+     padding: 6px 20px;
+     margin: 2px 30px;
+     border-radius:6px;
+     /* border: 1px solid black; */
+     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .user_imga{
+      width: 120px;
+     height: 120px;
+     border: 3px solid #ffffff;
+     /*background: url(img/user4.jpg);*/
+     border-radius: 50%;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     margin: auto;
+     text-align: center;
+     /* position: absolute; */
+     /* left: 0; */
+     /* right: 0; */
+     margin-top: -61px;
+     overflow: hidden;
+  }
+
+  .white-view{
+   padding: 1px 11px;
+     font-size: 30px;
+     border-radius: 50%;
+     text-align: center;
+     color: white;
+     background: #63b5e0;
+     /* border: 1px solid black; */
+     top: 136px;
+     position: absolute;
+     left: 56%;
+  }
+
+  .right_center{
+   text-align: center;
+   padding-top: 20px;
+  }
+  .user_txb,.user_txn,.user_txl{
+  padding:4px;
+  }
+  .user_txn{
+   color: black;
+   font-size:14px;
+  }
+  .user_txb{ font-size: 18px;
+     font-size: 20px;
+     color: black;
+     font-weight: bold;
+  }
+ 
+  .bg_set_cr{
+   margin-top:56px;
+   background: url(img/as.png);
+     padding-top: 75px;
+     height: 251px;
+     overflow: unset;
+     background-repeat: no-repeat;
+     background-size: cover;
+  }
+
+  .mang{
+    background: url(img/icon/mobile_icon.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 28% center;
+  }
+
+.new-imga>ul>li{
+    
+}
+
+.new-imga>ul>li:nth-child(1){
+   /*background: url(img/icon/ic_call.png);*/
+   display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px;
+    /*width: 24%;*/
+    padding: 2px;
+}
+.new-imga>ul>li:nth-child(2){
+   background: url(img/icon/ic_contact.png);
+   display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:26px;
+    width: 24%;
+    padding: 25px;
+}
+.new-imga>ul>li:nth-child(3){
+   /*background: url(img/icon/ic_message.png);*/
+   display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px;
+    /*width: 24%;*/
+    padding: 2px;
+}
+.new-imga>ul>li:nth-child(4){
+   /*background: url(img/icon/ic_whatsapp.png);*/
+   display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px;
+    /*width: 24%;*/
+    padding: 5px;
+}
+
+#overlay{
+  position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    text-align: center;
+    padding-top: 40%;
+
+}
+
+.loading {
+    text-align: center;
+  display: inline-block;
+  margin: 5em;
+  border-width:5px;
+
+  height:30px;
+  width:30px;
+  border-radius: 50%;
+  -webkit-animation: spin 1s linear infinite;
+     -moz-animation: spin 1s linear infinite;
+       -o-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  }
+ 
+.style-2 {
+  border-style:solid;
+  border-color: #27a7d6 transparent;
+  }
+
+  @-webkit-keyframes spin {
+  100% { -webkit-transform: rotate(359deg); }
+  }
+
+@-moz-keyframes spin {
+  100% { -moz-transform: rotate(359deg); }
+  }
+
+@-o-keyframes spin {
+  100% { -moz-transform: rotate(359deg); }
+  }
+
+@keyframes spin {
+  100% {  transform: rotate(359deg); }
+  }
+</style>
+
+  <!-- Toolbar -->
+  <div class="transparent" id="toolbar">
+    <div class="open-left waves-effect" data-activates="slide-out-left" id="open-left" ng-click="goMobileDirectory()">
+      <i class="ion-android-arrow-back white-text"></i>
+    </div>
+    <div class="logo_div"><img class="logo_hd" src="img/logo.png"></div>
+    <div>
+      <h1 class="title white-text">Employee  Details</h1>
+    </div>
+  </div><!-- End of Toolbar -->
+  <!-- Page Contents -->
+  <!-- End of Page Contents -->
+  <div style="clear:both;display: block;"></div>
+  <div class="animated fadeinup bg_set_cr" style="margin-bottom:120px">
+    <div class="todo-element card-vewer">
+      <div class="user_imga">
+         <img src="img/icon/img.png" ng-hide="image">
+         <img ng-src="{{image.imagePath+image.imageName}}" ng-show="image">
+      </div>
+      <div class="right_center">
+        <div class="user_txb">
+          {{pfdata['firstName']+" "+pfdata['lastName']}}
+        </div>
+        <div class="user_txn">
+          {{pfdata['designation']}}
+        </div>
+        <div class="user_txn">
+          {{pfdata['personalEmail']}}
+        </div>
+        <div class="user_txn mang">
+            {{pfdata['mobile']}}
+        </div>
+<div class="new-imga">
+<ul>
+  <li><a href="tel:{{pfdata['mobile']}}"><img src="img/icon/ic_call.png" width="24%"></a></li>
+  <li></li>
+  <li><a href="sms://{{pfdata['mobile']}}"><img src="img/icon/ic_message.png"></a></li>
+  <li><a href="https://api.whatsapp.com/send?phone=+91{{pfdata['mobile']}}"><img src="img/icon/ic_whatsapp.png"></a></li>
+
+  
+</ul>
+</div>
+      </div>
+    </div>
+  </div>
+  <div style="clear:both;display: block;"></div>
+
+   <div id="overlay" ng-show="displayloader">
+    <span class="loading style-2"></span>
+  </div>

@@ -1,0 +1,261 @@
+<script type="text/javascript">
+$('#hiddenInput').datepicker({
+  showOn: 'button',
+  buttonImage: 'http://jqueryui.com/resources/demos/datepicker/images/calendar.gif',
+  buttonImageOnly: true,
+  onSelect: function (selectedDate) {
+      $('#calendarDay').text(selectedDate);
+     
+  }
+});
+
+$('#hiddenInput2').datepicker({
+  showOn: 'button',
+  buttonImage: 'http://jqueryui.com/resources/demos/datepicker/images/calendar.gif',
+  buttonImageOnly: true,
+  onSelect: function (selectedDate) {
+      $('#calendarDay2').text(selectedDate);
+     
+  }
+});
+</script>
+<link href="css/punch.css" rel="stylesheet">
+<style type="text/css">
+  #sidenav-overlay {
+    position:inherit;
+    height: 0vh;
+     background-color: rgba(0,0,0,0) !important; 
+    z-index:1;
+    will-change: opacity;
+  }
+  body{
+    background: #f5f5f5;
+    overflow-x: none;
+    -webkit-overflow-x: none;
+  }
+
+  #overlay{
+    position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    text-align: center;
+    padding-top: 40%;
+
+  }
+
+  .loading {
+    text-align: center;
+    display: inline-block;
+    margin: 5em;
+    border-width:5px;
+
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    -o-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+  }
+ 
+.style-2 {
+  border-style:solid;
+  border-color: #27a7d6 transparent;
+  }
+
+  @-webkit-keyframes spin {
+  100% { -webkit-transform: rotate(359deg); }
+  }
+
+@-moz-keyframes spin {
+  100% { -moz-transform: rotate(359deg); }
+  }
+
+@-o-keyframes spin {
+  100% { -moz-transform: rotate(359deg); }
+  }
+
+@keyframes spin {
+  100% {  transform: rotate(359deg); }
+  }
+
+  .view-sr img{
+    width:20%; 
+  }
+
+  [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: static !important;
+     left: -9999px; 
+    opacity: 1;
+}
+
+.logo_hd{
+      width: 31px;
+    margin: auto;
+    /*position: absolute;*/
+    margin-top: 11px;
+    padding-left: 0px;
+     }
+
+     .logo_div{
+      padding:0px 30px;
+     }
+
+</style>
+
+  <!-- Main Container -->
+  <div class="main">
+    <!-- Toolbar -->
+    <div class="transparent" id="toolbar">
+      <div class="open-left waves-effect" data-activates="slide-out-left" id="open-left" ng-click="goHome()">
+        <i class="ion-android-arrow-back white-text"></i>
+      </div>
+      <div class="logo_div"><img class="logo_hd" src="img/logo.png"></div>
+      <div>
+        <h1 class="title white-text">Attendance</h1>
+      </div>
+    </div>
+    <div class="marlet">
+      <div class="mach make vies1">
+        Punch In/Out
+      </div>
+      <div class="mach vies2">
+        My Attendance
+      </div>
+    </div>
+    <div class="sec_one" style="display: block;">
+     
+      <div>
+        <div id="map" style="height: 630px; width: 100%"></div>
+      </div>
+      <div class="animated fadeinup" style="padding-top:9px;">
+        <div class="todo-element posion card-vew">
+          <div class="" style="padding-left: 10%; padding-right: 10%; padding-top: 2%; padding-bottom: 2%">
+
+          <!-- punch out -->
+            <div class="macher" ng-show = "attendance_data[0]['reportOutTime']" id="punchout" style="float: right">
+              <p style=" opacity: 0.5;">Punch Out</p>
+              <img src="img/icon/active.png" style="opacity: 0.5;">
+              <p class="punch_in" ng-show="true">{{attendance_data[0]['reportOutTime']}}</p>
+            </div>
+            <!-- not punchout -->
+            <div class="macher" ng-hide = "attendance_data[0]['reportOutTime']" ng-click="punchOut()" id="punchout2" style="float: right">
+              <p class="">Punch Out</p>
+              <img src="img/icon/active.png">
+            </div>
+          <!-- punch in -->
+            <div class="macher" id="punchin" ng-show="attendance_data[0]['reportInTime']" >
+              <p style=" opacity: 0.5;">Punch in</p>
+              <img src="img/icon/activeo.png" style="opacity: 0.5;">
+              <p class="punch_in">{{attendance_data[0]['reportInTime']}}</p>
+            </div>
+            <!-- not punch in -->
+            <div class="macher" ng-hide="attendance_data[0]['reportInTime']" ng-click="puncIn()" id="punchin2" style="">
+              <p>Punch in</p>
+              <img src="img/icon/activeo.png" >
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sec_two" style="display:none;">
+     <div class="card-vew">
+       <div class="view-sr">
+         <!-- <div> Start Date </div>
+         <div>5</div>
+         <div><span>Sep</span><br><li>2017</li></div> -->
+         <input type="hidden" id="hiddenInput" />
+        <label id="calendarDay" style="margin-left: 25%">{{todate}}</label>
+       </div>
+
+       <div class="view-sr new_view">
+          To
+       </div>
+
+       <div class="view-sr">
+         <!-- <div>End Date</div>
+         <div>5</div>
+         <div><span>Sep</span><br><li>2017</li></div> -->
+         <input type="hidden" id="hiddenInput2" />
+        <label id="calendarDay2" style="margin-left: 25%">{{fromdate}}</label>
+       </div>
+     </div>
+     <div class="srh-view waves-effect" ng-click="todateClick()"> Search</div>
+     <div class="card-vew mr_let"  ng-show="checkbox" ng-repeat="listdate in list_date" style="margin-bottom: 5px">
+       <div class="img_Sect"> 
+        <div>
+          <!-- <img src="img/icon/ic_checked.png"> -->
+          <input type="checkbox" name="checkdate" class="checkdate" ng-value="listdate" ng-model="selectedList[listdate]">
+        </div> 
+        <div>{{listdate}}</div>
+       </div>
+        <div class="img_sev"><div>10</div><div><img src="img/icon/ic_timesheet_labelblue.png"></div>
+       </div>
+     </div>
+  <div class="srh-end" ng-click="regulariseFunc()"> Regularize</div>
+    </div>
+  </div>
+
+  <div id="overlay" ng-show="displayloader">
+    <span class="loading style-2"></span>
+  </div>
+
+  <!-- End of Main Container -->
+  <!-- Scripts -->
+  
+  <script type="text/javascript">
+   $(function() {
+
+  $('.mach').click(function(){
+     $('.mach').removeClass('make');
+     $(this).addClass('make');
+  }),
+  $('.vies1').click(function(){
+     $('.sec_one').css({"display": "block"}),
+     $('.sec_two').css({"display": "none"});
+
+  }),
+
+  $('.vies2').click(function(){
+     $('.sec_one').css({"display": "none"}),
+     $('.sec_two').css({"display": "block"});
+
+  });
+  });
+  </script> 
+
+  
+
+  
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSRO2VArZnld512proVTNLGfOdfh2NiJo&callback=initMap">
+</script>
+
+<script>
+  function initMap() {
+    var uluru = {lat: 28.597661199999997, lng: 77.32761599999999};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: uluru
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+</script>
+
+   <!--  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ -->
+    
+

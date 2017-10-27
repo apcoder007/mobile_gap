@@ -1,0 +1,472 @@
+<script type="text/javascript">
+      $('#hiddenInput').datepicker({
+        showOn: 'button',
+        buttonImage: 'http://jqueryui.com/resources/demos/datepicker/images/calendar.gif',
+        buttonImageOnly: true,
+        onSelect: function (selectedDate) {
+            $('#calendarDay').text(selectedDate);
+           
+        }
+    });
+
+      $('#hiddenInput2').datepicker({
+        showOn: 'button',
+        buttonImage: 'http://jqueryui.com/resources/demos/datepicker/images/calendar.gif',
+        buttonImageOnly: true,
+        onSelect: function (selectedDate) {
+            $('#calendarDay2').text(selectedDate);
+           
+        }
+    });
+    </script>
+ 
+  <!-- <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+  </script> -->
+  <link href="css/punch.css" rel="stylesheet">
+<style type="text/css">
+  #sidenav-overlay {
+    position:inherit;
+    height: 0vh;
+     background-color: rgba(0,0,0,0) !important; 
+    z-index:1;
+    will-change: opacity;
+}
+body{
+    background: #f5f5f5;
+    overflow-x: none;
+    -webkit-overflow-x: none;
+  }
+
+  #overlay{
+  position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    text-align: center;
+    padding-top: 40%;
+
+}
+
+.loading {
+    text-align: center;
+  display: inline-block;
+  margin: 5em;
+  border-width:5px;
+
+  height:30px;
+  width:30px;
+  border-radius: 50%;
+  -webkit-animation: spin 1s linear infinite;
+     -moz-animation: spin 1s linear infinite;
+       -o-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  }
+ 
+.style-2 {
+  border-style:solid;
+  border-color: #27a7d6 transparent;
+  }
+
+  @-webkit-keyframes spin {
+  100% { -webkit-transform: rotate(359deg); }
+  }
+
+@-moz-keyframes spin {
+  100% { -moz-transform: rotate(359deg); }
+  }
+
+@-o-keyframes spin {
+  100% { -moz-transform: rotate(359deg); }
+  }
+
+@keyframes spin {
+  100% {  transform: rotate(359deg); }
+  }
+
+  .view-sr img{
+    width:20%; 
+  }
+
+  [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: static !important;
+     left: -9999px; 
+    opacity: 1;
+}
+
+
+  .ui-datepicker-inline{
+    width: 100%
+  }
+
+  .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    color: none;
+    background: rgba(0, 120, 181, 0.6);
+    border: none;  
+  }
+
+  .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+
+    text-align: center;
+  }
+
+  .ui-datepicker td.holiday a, .ui-datepicker td.holiday a:hover {
+     background: url(img/holiday.png);
+      border: 1px solid #c5c5c5;
+     background-repeat: no-repeat;
+     background-size: 18px;
+     background-position: center;
+      
+      color: transparent;
+   }
+   .posion {
+     position:inherit !important; 
+    left: 0;
+    right: 0;
+    bottom: 41px;
+  }
+  .lowerdiv{
+    margin-top: 5% !important;
+  }
+
+  .datepicker {
+    font-size: 1.5rem;
+    padding-left: 25px !important;
+    background: url(img/Calendar.png); 
+    background-size: 18px; 
+    background-repeat: no-repeat;
+    background-position-y: 5px;
+    width: 80% !important;
+}
+
+.srh-end {
+    padding: 5px !important;
+    text-align: center;
+     margin: 0px !important; 
+    background: rgba(3, 84, 127, 0.65) !important;
+     border-radius: none !important; 
+    color: white;
+    font-size: 18px !important;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+.selectInput{
+  display: block; 
+  border: none; 
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.33); 
+  margin-bottom: 10px
+}
+
+#alertmessage{
+  background-color: rgba(16, 16, 16, 0.7);
+  max-width: 290px;
+    top: 500px;
+    left: 25%;
+
+    z-index: 1100;
+    display: inline-block;
+    position: absolute;
+    padding: 10px;
+    outline: 0;
+    border-radius: 10px;
+    padding-top: 15px;
+}
+
+#alertmessage div{
+  
+    border-color: #ddd;
+    color: white;
+  
+}
+.leavebalancetable tr td{
+  text-align: center;
+}
+
+.leavebalancetable tr:nth-child(odd){
+  font-weight: bold;
+}
+
+.leavehistorytable tr td:nth-child(odd), .leavehistorytable tr th:nth-child(odd){
+  text-align: left;
+}
+.leavehistorytable tr td:nth-child(even), .leavehistorytable tr th:nth-child(even){
+  text-align: right;
+}
+
+.logo_hd{
+      width: 31px;
+    margin: auto;
+    /*position: absolute;*/
+    margin-top: 11px;
+    padding-left: 0px;
+     }
+
+     .logo_div{
+      padding:0px 30px;
+     }
+</style>
+
+
+  <div id="alertmessage" ng-show="alertshow">
+    <div><p>{{alertmessage}}</p></div>
+  </div>
+  <!-- Main Container -->
+  <div class="main">
+    <!-- Toolbar -->
+    <div class="transparent" id="toolbar">
+      <div class="open-left waves-effect" data-activates="slide-out-left" id="open-left" ng-click="goHome()">
+        <i class="ion-android-arrow-back white-text"></i>
+      </div>
+      <div class="logo_div"><img class="logo_hd" src="img/logo.png"></div>
+      <div>
+        <h1 class="title white-text">Leave</h1>
+      </div>
+    </div>
+    <div class="marlet">
+      <div class="mach make vies1">
+        New Leave
+      </div>
+      <div class="mach vies2">
+        My Leaves
+      </div>
+    </div>
+    <div class="sec_one" style="display: block;">
+      <div class="animated fadeinup" style="padding-top:9px;">
+        <div class="todo-element posion card-vew">
+          <div class="" style="padding-top: 2%; padding-bottom: 2%">
+
+          <div id="datepicker"></div>
+
+          </div>
+        </div>
+        <div style="clear: both;display: block; padding-left: 5%; padding-top: 5%; font-weight: bold">
+        <p style="color: #0078b5; font-size: 16px;">New Leave</p> </div>
+        <div class="card-vew lowerdiv" style="padding: 20px;">
+
+          <form ng-submit="submitLeave(leavetype, leavereason, leaveduration, startdate, enddate, otherreason)">
+      
+             <select class="selectInput" ng-model="leavetype">
+               <option value="">Leave Type</option>
+               <option value="CL(4.00)">CL(4.00)</option>
+               <option value="EL(12.00)">EL(12.00)</option>
+               <option value="LWP">LWP</option>
+               <option value="ML">ML</option>
+               <option value="Restricted Holiday">Restricted Holiday</option>
+             </select>     
+
+           <select class="selectInput" ng-model="leavereason">
+             <option value="">Leave Reason</option>
+             <option value="Personal">Personal</option>
+             <option value="Not Well">Not Well</option>
+             <option value="Others">Others</option>
+           </select>
+
+           <select class="selectInput" ng-model="leaveduration">
+             <option value="">Leave Duration</option>
+             <option value="Full Day">Full Day</option>
+             <option value="Half Day">Half Day</option>
+           </select>
+
+          <div style="clear: both;display: block;"></div>
+
+          <div class="row" style="display: block;">
+            <div class="col-xs-6">
+              <input class="datepicker" type="date" ng-model="startdate">
+            </div>
+            <div class="col-xs-6" >
+              <input class="datepicker" type="date" ng-model="enddate">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="reasondiv" type="text" class="validate" style="margin: 0 0 0px 0;" ng-model="otherreason">
+              <label for="reasondiv" style="font-size: 1.0rem;">Any Other Reason</label>
+            </div>
+          </div>
+
+
+            
+         
+
+         <input type="submit" class="srh-end" name="" value="Submit">
+         
+    <!-- <div class="srh-end"> Regularise</div> -->
+    
+      <script type="text/javascript">
+
+        $('.datepicker').pickadate({
+          format: 'mm/dd/yyyy',
+          selectMonths: true, // Creates a dropdown to control month
+          selectYears: 15, // Creates a dropdown of 15 years to control year,
+          today: 'Today',
+          clear: 'Clear',
+          close: 'Ok',
+          closeOnSelect: false // Close upon selecting a date,
+        });
+
+      </script> 
+
+    </form>
+
+        </div>
+      </div>
+    </div>
+   
+
+    <div class="sec_two" style="display:none;">
+      <div style="clear: both;display: block; padding-left: 5%; padding-top: 5%; margin-top: 30%;font-weight: bold">
+        <p style="color: #0078b5; font-size: 16px">Leave Balance</p> 
+      </div>
+     <div class="card-vew" style="margin-top: 0px">
+        <table class="leavebalancetable">
+          <tr>
+            <td>EL</td>
+            <td>CL</td>
+            <td>SL</td>
+          </tr>
+          <tr>
+            <td>Annual Quota</td>
+            <td>Annual Quota</td>
+            <td>Annual Quota</td>
+          </tr>
+          <tr>
+            <td>18.0</td>
+            <td>12.0</td>
+            <td>6.0</td>
+          </tr>
+          <tr>
+            <td>Current Balance</td>
+            <td>Current Balance</td>
+            <td>Current Balance</td>
+          </tr>
+          <tr>
+            <td>12.0</td>
+            <td>4.0</td>
+            <td>4.0</td>
+          </tr>
+        </table>
+       
+     </div>
+
+     <div style="clear: both;display: block; padding-left: 5%; padding-top: 5%; margin-top: 0%;font-weight: bold">
+        <p style="color: #0078b5; font-size: 16px">Leave History</p> 
+      </div>
+
+      <div class="card-vew" style="margin-top: 5%; height: 100%">
+        <table class="leavehistorytable">
+          <tr>
+            <th>CL | Personal Work</th>
+            <th>1.0 Day</th>
+          </tr>
+          <tr>
+            <td>09/27/2017 to 09/30/2017</td>
+            <td>Rejected</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    
+
+  </div>
+
+  <div id="overlay" ng-show="displayloader">
+    <span class="loading style-2"></span>
+  </div>
+
+  <!-- End of Main Container -->
+  <!-- Scripts -->
+  
+  <script type="text/javascript">
+   $(function() {
+
+  $('.mach').click(function(){
+     $('.mach').removeClass('make');
+     $(this).addClass('make');
+  }),
+  $('.vies1').click(function(){
+     $('.sec_one').css({"display": "block"}),
+     $('.sec_two').css({"display": "none"});
+
+  }),
+
+  $('.vies2').click(function(){
+     $('.sec_one').css({"display": "none"}),
+     $('.sec_two').css({"display": "block"});
+
+  });
+  });
+  </script> 
+
+  <script>
+// var holiDays =[[2017,09,01,'New Years Day'],[2017,09,14,'Pongal'],[2017,09,25,'Christmas Day']];
+var holiDays = [];
+var holidaylist = [];
+$.ajax({
+  url: "https://gapapi-100.appspot.com/api/upcoming/holiday/",
+  method: 'post', 
+  success: function(result){
+        // console.log(result.holiday_data);
+        var holidayresult = result.holiday_data;
+       
+        for(i = 0; i<holidayresult.length; i++){
+           var hdlist = [];
+
+          var month = holidayresult[i]['date'].split("/")[0];
+          console.log(month);
+          var day = holidayresult[i]['date'].split("/")[1];
+          var year = holidayresult[i]['date'].split("/")[2];
+          var holidayname = holidayresult[i]['holiday'];
+          hdlist.push(parseInt(year));
+          hdlist.push(parseInt(month));
+          hdlist.push(parseInt(day));
+          hdlist.push(holidayname);
+          holidaylist.push(hdlist);
+        }
+
+       holiDays = holidaylist;
+
+        console.log(holiDays);
+
+        $(function(){
+          $('#datepicker').datepicker({ 
+            beforeShowDay: setHoliDays,
+            onSelect: function(dt){
+                // window.open("http://www.google.com?dt=" + dt);
+
+                $("#calcontents").text(dt);
+            }
+
+         });
+
+          function setHoliDays(date) {
+             for (i = 0; i < holiDays.length; i++) {
+               if (date.getFullYear() == holiDays[i][0]
+                  && date.getMonth() == holiDays[i][1] - 1
+                    && date.getDate() == holiDays[i][2]) {
+                  return [true, 'holiday', holiDays[i][3]];
+               }
+             }
+            return [true, ''];
+          }
+
+
+      });
+        
+    }});
+
+
+</script>
+    
+

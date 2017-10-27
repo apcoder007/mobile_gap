@@ -1,0 +1,375 @@
+<style type="text/css">
+  body{
+    background: #f5f5f5;
+    font-family: 'PT Serif', serif;
+    overflow-x: none;
+    -webkit-overflow-x: none;
+
+  }
+     .logo_hd{
+      width: 31px;
+    margin: auto;
+    /* top: 14px; */
+    margin-top: 11px;
+    padding-left: 0px;
+     }
+
+     .logo_div{
+      padding:0px 30px;
+     }
+     .white-text{
+      font-family:inherit !important;
+     }
+.nvt-wew{
+  padding: 0px 10px;
+    font-size: 17px;
+    font-family: inherit;
+    font-weight: 400;
+}
+.card-vewer{
+    background: #ffffff;
+    padding: 6px 20px;
+    margin: 2px 30px;
+    border-radius:6px;
+    /* border: 1px solid black; */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.user_imga{
+     width: 120px;
+    height: 120px;
+    border: 3px solid #ffffff;
+    /*background: url(img/user4.jpg);*/
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    text-align: center;
+    /* position: absolute; */
+    /* left: 0; */
+    /* right: 0; */
+    margin-top: -61px;
+    overflow: hidden;
+}
+ 
+ .white-view{
+  padding: 1px 11px;
+    font-size: 30px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    background: #63b5e0;
+    /* border: 1px solid black; */
+    top: 136px;
+    position: absolute;
+    left: 56%;
+ }
+
+ .right_center{
+  text-align: center;
+  padding-top: 20px;
+ }
+.user_txb,.user_txn,.user_txl{
+padding:4px;
+}
+.user_txn{
+  color: black;
+  font-size: 20px;
+}
+ .user_txb{ font-size: 18px;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+ }
+
+.user_txl{
+    font-weight: lighter;
+    color: #787878;
+    font-size: 18px;
+}
+.bg_set_cr{
+  margin-top:56px;
+  background: url(img/as.png);
+    padding-top: 75px;
+    height: 251px;
+    overflow: unset;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-vewnew{ 
+    margin-top: 20px;
+    background: #ffffff;
+    padding: 6px 10px;
+    margin: 2px 9px;
+    border-radius: 3px;
+    /* border: 1px solid black; */
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.12), 0 1px 0px rgba(0, 0, 0, 0.1);
+}
+ 
+
+.card-vewnew>div:nth-child(1){
+   font-size: 19px;
+   color: #0077b5;
+    font-family: 'PT Serif', serif;
+    font-weight: 500;
+    padding:3px  0px ;
+}
+
+.card-vewnew>div:nth-child(2),.let>div:nth-child(1){
+   color:#303030;
+   font-size: large;
+    padding:3px  0px ;
+
+}
+  
+.card-vewnew>div:nth-child(3),.let>div:nth-child(2){
+   color:#000000;
+   font-size:17px;
+    padding:3px  0px ;
+}
+
+.vite>div:nth-child(1){
+  font-weight: bold !important;
+  padding-bottom: 0px;
+}
+.vite>div:nth-child(2),.viter>div:nth-child(1){
+padding: 0px;
+color: #b8b8b8;
+}
+
+.vite>div:nth-child(3),.viter>div:nth-child(2){
+    padding: 10px 28px;
+    background: url(img/icon/mobile_icon.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 0px 13px;
+}
+
+.faimly-deter{
+  display: inline-block;
+  width: 49%
+}
+.faimly-deter>div:nth-child(1){
+ color: #b8b8b8 !important;
+ font-size: 16px;
+}
+
+.faimly-deter>div:nth-child(2){
+ color: #000000 !important;
+ font-size: 15px;
+}
+
+#sidenav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120vh;
+     background-color: rgba(0,0,0,0) !important; 
+    z-index: 997;
+    will-change: opacity;
+}
+
+#overlay{
+  position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    text-align: center;
+    padding-top: 40%;
+
+}
+
+.loading {
+    text-align: center;
+  display: inline-block;
+  margin: 5em;
+  border-width:5px;
+
+  height:30px;
+  width:30px;
+  border-radius: 50%;
+  -webkit-animation: spin 1s linear infinite;
+     -moz-animation: spin 1s linear infinite;
+       -o-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  }
+ 
+.style-2 {
+  border-style:solid;
+  border-color: #27a7d6 transparent;
+  }
+
+   @-webkit-keyframes spin {
+  100% { -webkit-transform: rotate(359deg); }
+  }
+
+@-moz-keyframes spin {
+  100% { -moz-transform: rotate(359deg); }
+  }
+
+@-o-keyframes spin {
+  100% { -moz-transform: rotate(359deg); }
+  }
+
+@keyframes spin {
+  100% {  transform: rotate(359deg); }
+  }
+
+
+  .image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    width: 80px;
+    cursor: pointer;
+}
+
+</style>
+  
+      
+
+      <!-- Toolbar -->
+      <div id="toolbar" class="transparent">
+        <div class="open-left waves-effect" id="open-left" data-activates="slide-out-left" ng-click="goHome()">
+          <i class="ion-android-arrow-back white-text"></i>
+        </div>
+        <div class="logo_div"><img  class="logo_hd" src="img/logo.png"></div>
+        <div><h1 class="title white-text">  Employee Profile</h1></div>
+      </div>
+      <!-- End of Toolbar -->
+
+ 
+
+
+      <!-- Page Contents -->
+      
+ 
+      <!-- End of Page Contents -->
+<div style="clear:both;display: block;"></div>
+ <div class="animated fadeinup bg_set_cr">
+ 
+      <div class="todo-element card-vewer">
+         <div class="user_imga" ng-hide="img_src">
+            <img src="img/icon/img.png">
+           
+           <div class="image-upload">
+              <label for="file-input">
+                  <i class="ion-ios-camera white-view"></i>
+              </label>
+
+              <input id="file-input" type="file" name="imagefile" accept="image/*" custom-on-change="uploadFile" />
+          </div>
+         </div>
+         <div class="user_imga" ng-show="img_src">
+          <img ng-src="{{img_src}}">
+           
+           <div class="image-upload">
+              <label for="file-input">
+                  <i class="ion-ios-camera white-view"></i>
+              </label>
+
+              <input id="file-input" type="file" name="imagefile" accept="image/*" custom-on-change="uploadFile" />
+          </div>
+         </div>
+        <div class="right_center"><div class="user_txb">{{headpara[2]+" "+headpara[3]}}</div>
+        <div class="user_txn"> {{headpara[4]}}</div>
+        <div class="user_txl"> {{headpara[6]}}</div></div>
+     
+         </div>
+      </div>
+    <div style="clear:both;display: block;"></div>  
+
+<div class="card-vewnew" style="margin-top: 58px">
+<div>  New Joiner 10sep-04sep  </div>
+<div style="color: gray">  Employee Code </div>
+<div> {{empdetails['empCode']}} </div>
+</div>
+<div class="card-vewnew let"  >
+ <div style="color: gray"> Date Of Joining </div>
+<div> {{empdetails['dateOfJoining']}} </div>
+</div>
+<div class="card-vewnew let"  >
+ <div style="color: gray"> Grade </div>
+<div>{{empdetails['grade']}}</div>
+</div>
+<div class="card-vewnew let"  >
+ <div style="color: gray"> Designation </div>
+<div>{{empdetails['designation']}}</div>
+</div>
+<div class="card-vewnew let"  >
+ <div style="color: gray"> Notice period </div>
+<div>{{empdetails['noticePeriod']}}</div>
+</div>
+
+<div class="card-vewnew let"  >
+ <div style="color: gray"> Employment status</div>
+<div> {{empdetails['empStatus']}} </div>
+</div>
+<div class="card-vewnew let"  >
+ <div style="color: gray"> Employment type</div>
+<div> permanent</div>
+</div>
+<div class="card-vewnew let"  >
+ <div style="color: gray"> Department</div>
+<div>{{empdetails['department']}}</div>
+</div>
+<div class="card-vewnew let"  >
+ <div style="color: gray"> Locaton</div>
+<div> {{empdetails['addrLine_2']}}</div>
+</div>
+<div class="card-vewnew let"  >
+ <div style="color: gray"> Probation Period</div>
+<div> {{empdetails['probationPeriod']}} </div>
+</div>
+<div class="card-vewnew let"  >
+ <div style="color: gray"> Confirmation Status</div>
+<div> {{empdetails['confirmationStatus']}}</div>
+</div>
+
+<div class="card-vewnew let"  >
+ <div style="color: gray"> Relieving Date</div>
+<div>  {{empdetails['relievingDate']}} </div>
+</div>
+<div class="card-vewnew vite "  >
+ <div >Contact Details </div>
+<div style="color: gray">Residence Address </div>
+<div> {{empdetails['contactMobileNo']}}</div>
+</div>
+<div class="card-vewnew viter "  >
+<div style="color: gray">Permannet Address </div>
+<div> {{empdetails['mobile']}}</div>
+</div>
+<div class="card-vewnew"  >
+ <div >Family details Details </div>
+  <div class="faimly-deter">
+    <div style="color: gray"> Dependent Name  </div>
+     <div> {{empdetails['dependentName']}}</div>
+  </div>
+  <div class="faimly-deter">
+    <div style="color: gray">Relitionship </div>
+     <div>{{empdetails['relationship']}}  </div>
+  </div>
+  <div class="faimly-deter">
+    <div> is Dependent </div>
+     <div> Yes</div>
+  </div>
+</div>
+ 
+ <div id="overlay" ng-show="displayloader">
+    <span class="loading style-2"></span>
+  </div>
+ 
+ 

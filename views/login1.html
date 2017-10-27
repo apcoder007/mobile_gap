@@ -1,0 +1,213 @@
+<style type="text/css">
+    body{
+          margin: auto;
+   
+    background: url(img/login_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 8% 20px;
+    overflow-x: none;
+    -webkit-overflow-x: none;
+    }
+.section_min{
+    text-align: left;
+    display: inline-block;
+    padding: 22px 17px;
+    width: 48%;
+
+    }
+ [type="checkbox"]+label {
+  color: black !important;
+  font-size: 16px;
+
+ }
+
+ 
+.form_dign{
+      padding-top: 32px;
+    background: rgba(255, 255, 255, 0.51);
+    box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 0 1px 2px rgba(0,0,0, 0.24);
+    text-align: center;
+    padding-bottom: 43px;
+}
+
+
+.uese_mg,.paswd_mg{
+      height: 0rem !important;
+  width: 83% !important;
+        padding: 19px 0px 17px 40px !important;
+    font-weight: 500 !important;
+    font-family: sans-serif;
+    font-size: 15px;
+    background: transparent;
+    border: 0px;
+    border-bottom: 0.5px solid black;
+    color: black !important;
+}
+input:focus {
+    outline:none !important;
+}
+.uese_mg{ 
+      background: url(/img/icon/username.png);
+    background-repeat: no-repeat;
+    background-size: 27px;
+    background-position: 3px 5px;
+
+}
+.paswd_mg{
+ background: url(img/icon/password.png);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: 3px 6px;
+} 
+
+.cus_new{
+    padding: 22px 21px;
+    text-align: right;
+    font-family: 'PT Serif', serif;
+}
+
+.change_view{
+  text-align: right;
+  padding-right: 20px;
+  font-family: 'PT Serif', serif;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
+  box-shadow:none !important;
+}
+.viewportr{
+  text-align: center;
+  padding-bottom: 40px;
+}
+.viewportr>img{
+    width: 170px;
+    margin: auto;
+    text-align: center;
+}
+
+.sig_in{
+  padding: 13px;
+    text-align: center;
+    background: #0178b5;
+    font-weight: 500;
+    font-size: 17px;
+    margin-top: 48px;
+    border-radius: 4px;
+}
+.sig_in a{
+  color: white;
+}
+
+#submitButton {
+    background:none!important;
+     border:none; 
+     padding:0!important;
+    
+    /*optional*/
+    font-family:arial,sans-serif; /*input has OS specific font-family*/
+     color:#fff;
+   }
+
+   #sidenav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120vh;
+     background-color: rgba(0,0,0,0) !important; 
+    z-index: 997;
+    will-change: opacity;
+}
+     
+#overlay{
+  position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    text-align: center;
+    padding-top: 40%;
+
+}
+
+.loading {
+    text-align: center;
+  display: inline-block;
+  margin: 5em;
+  border-width:5px;
+
+  height:30px;
+  width:30px;
+  border-radius: 50%;
+  -webkit-animation: spin 1s linear infinite;
+     -moz-animation: spin 1s linear infinite;
+       -o-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  }
+ 
+.style-2 {
+  border-style:solid;
+  border-color: #27a7d6 transparent;
+  }
+
+
+@-webkit-keyframes spin {
+  100% { -webkit-transform: rotate(359deg); }
+  }
+
+@-moz-keyframes spin {
+  100% { -moz-transform: rotate(359deg); }
+  }
+
+@-o-keyframes spin {
+  100% { -moz-transform: rotate(359deg); }
+  }
+
+@keyframes spin {
+  100% {  transform: rotate(359deg); }
+  }
+
+</style>
+
+<div class="viewportr"><img src="img/gaplogix.png"></div>
+
+<form ng-submit="loginSubmit(username, password)">
+  <div class="form_dign">
+    
+    <div class="container">
+      <p style="font-size: 12px; color: red; text-align: center" ng-show="wrongpsd">Wrong Password!!!</p>
+      <div> 
+        <input class="uese_mg" type="text" placeholder="Username" name="uname" ng-model="username" required>
+      </div>
+      <div style="padding-top: 13px;"> 
+        <input class="paswd_mg" type="password" placeholder="Password" name="uname" ng-model="password" required>
+      </div>
+    </div>
+
+    <div>
+      <div class="section_min">
+        <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+        <label for="filled-in-box"> Remember</label>
+      </div>  
+      <div  class="section_min cus_new" >
+        <span class="psw">Forgot <a ng-click="goForgotPassword()">password?</a></span>
+      </div>
+      <div class="change_view">Change domain name</div>
+    </div>
+
+    </div>
+    <!-- <div class="sig_in"><a href="#"> SIGN IN</a></div> -->
+    <div class="sig_in"><input type="submit" name="" value="SIGN IN" id="submitButton"></div>
+  </form>
+
+  
+  <div id="overlay" ng-show="displayloader">
+    <span class="loading style-2"></span>
+  </div>

@@ -1,0 +1,183 @@
+<script type="text/javascript">
+    $('#hiddenInput').datepicker({
+      showOn: 'button',
+      buttonImage: 'http://jqueryui.com/resources/demos/datepicker/images/calendar.gif',
+      buttonImageOnly: true,
+      onSelect: function (selectedDate) {
+          $('#calendarDay').text(selectedDate);
+         
+      }
+    });
+    
+    $('#hiddenInput2').datepicker({
+      showOn: 'button',
+      buttonImage: 'http://jqueryui.com/resources/demos/datepicker/images/calendar.gif',
+      buttonImageOnly: true,
+      onSelect: function (selectedDate) {
+          $('#calendarDay2').text(selectedDate);
+         
+      }
+    });
+    </script>
+    
+    <style type="text/css">
+      #sidenav-overlay {
+        position:inherit;
+        height: 0vh;
+         background-color: rgba(0,0,0,0) !important; 
+        z-index:1;
+        will-change: opacity;
+      }
+      body{
+        background: #f5f5f5;
+        overflow-x: none;
+        -webkit-overflow-x: none;
+      }
+    
+      #overlay{
+        position: fixed; /* Sit on top of the page content */
+        display: block; /* Hidden by default */
+        width: 100%; /* Full width (cover the whole page) */
+        height: 100%; /* Full height (cover the whole page) */
+        top: 0; 
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+        z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+        cursor: pointer; /* Add a pointer on hover */
+        text-align: center;
+        padding-top: 40%;
+    
+      }
+    
+      .loading {
+        text-align: center;
+        display: inline-block;
+        margin: 5em;
+        border-width:5px;
+    
+        height:30px;
+        width:30px;
+        border-radius: 50%;
+        -webkit-animation: spin 1s linear infinite;
+        -moz-animation: spin 1s linear infinite;
+        -o-animation: spin 1s linear infinite;
+        animation: spin 1s linear infinite;
+      }
+     
+    .style-2 {
+      border-style:solid;
+      border-color: #27a7d6 transparent;
+      }
+    
+      @-webkit-keyframes spin {
+      100% { -webkit-transform: rotate(359deg); }
+      }
+    
+    @-moz-keyframes spin {
+      100% { -moz-transform: rotate(359deg); }
+      }
+    
+    @-o-keyframes spin {
+      100% { -moz-transform: rotate(359deg); }
+      }
+    
+    @keyframes spin {
+      100% {  transform: rotate(359deg); }
+      }
+    
+      .view-sr img{
+        width:20%; 
+      }
+    
+      [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: static !important;
+         left: -9999px; 
+        opacity: 1;
+    }
+    .logo_hd {
+        width: 31px;
+        margin: auto;
+        /* position: absolute; */
+        margin-top: 11px;
+        padding-left: 0px;
+    }
+    .listholidays{
+        margin-top: 18%;
+        margin-left: 5px;
+        color: #05abef;
+    }
+
+    .holidaytable>thead{
+        background-color: rgba(128, 128, 128, 0.5);;
+    }
+    .holidaytable thead th{
+        border-radius: 0px;
+        text-align: center;
+    }
+    .holidaytable tbody tr{
+        margin-top: 5px;
+        border: 5px solid transparent;
+        /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
+    }
+    .holidaytable tbody tr td{
+        text-align: center;
+    }
+    .timeline-panel {
+        border-radius: 2px;
+        -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175); 
+    }
+    
+    </style>
+    
+      <!-- Main Container -->
+      <div class="main">
+        <!-- Toolbar -->
+        <div class="transparent" id="toolbar">
+          <div class="open-left waves-effect" data-activates="slide-out-left" id="open-left" ng-click="goHome()">
+            <i class="ion-android-arrow-back white-text"></i>
+          </div>
+          <div class="logo_div"><img class="logo_hd" src="img/logo.png"></div>
+          <div>
+            <h1 class="title white-text">Attendance</h1>
+          </div>
+        </div>
+        
+        <h3 class="listholidays">Listed Holidays</h3>
+       
+        <table class="table table-striped holidaytable">
+            <thead>
+                <th>Holiday Name</th>
+                <th>Holiday Date</th>
+                <th>Holiday Day</th>
+            </thead>
+            <tbody>
+                <tr class="timeline-panel" ng-repeat="list in holidaylist">
+                    <td>{{list.holiday}}</td>
+                    <td>{{list.date}}</td>
+                    <td>{{list.day}}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+      </div>
+    
+
+
+      <div id="overlay" ng-show="displayloader">
+        <span class="loading style-2"></span>
+      </div>
+    
+      <!-- End of Main Container -->
+      <!-- Scripts -->
+      
+      
+    
+      
+    
+      
+    
+        
+    
+    

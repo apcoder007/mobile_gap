@@ -1,0 +1,258 @@
+<link rel="stylesheet" type="text/css" href="css/home1.css">
+<style>
+  .logo_hd{
+      width: 31px;
+    margin: auto;
+    /*position: absolute;*/
+    margin-top: 11px;
+    padding-left: 0px;
+     }
+
+     .logo_div{
+      padding:0px 30px;
+     }
+     .position_set{
+       display: block;
+     }
+     .hedview{
+      background-color: #0078b5 !important;
+      padding: 5px !important;
+     }
+     .para{
+       background-color: white !important;
+     }
+     .modal-content {
+      background-color: rgba(0, 0, 0, 0.50);
+      color: white;
+      margin: auto;
+      padding: 15px;
+      /* border: 1px solid #888; */
+      width: 55%;
+      text-align: center;
+      position: fixed;
+      top: 45%;
+      left: 0;
+      right: 0;
+      font-weight: bold;
+      border-radius: 2%;
+  }
+</style>
+<!-- Main Container -->
+<div id="main" class="main">
+
+  <!-- Toolbar -->
+  <div id="toolbar" class="transparent">
+    <div class="open-left" id="open-left" data-activates="slide-out-left">
+      <i class="ion-android-menu white-text"></i>
+    </div>
+    <div class="logo_div"><img  class="logo_hd" src="img/logo.png"></div>
+    <div><h1 class="title white-text"> Gap Logix</h1></div>
+  </div>
+      <!-- End of Toolbar -->
+
+
+  <div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="https://storage.googleapis.com/gapapi-100.appspot.com/Background/img1.png" alt="Los Angeles" style="width:100%;">
+        </div>
+
+        <div class="item">
+          <img src="https://storage.googleapis.com/gapapi-100.appspot.com/Background/img2.png" alt="Chicago" style="width:100%;">
+        </div>
+
+        <div class="item">
+          <img src="https://storage.googleapis.com/gapapi-100.appspot.com/Background/img3.png" style="width:100%;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Contents -->
+  <div class="animated fadeinup" style="padding-top:11px;">
+    <div class="todo-element card-vew">
+      <p class="hedview para">My task</p>
+      
+      <div class="bg-img" ng-if="tasklist" ng-click="goTask()">{{tasklist.reason}}</div>
+      <div class="bg-img" ng-if="!tasklist">You have no task</div>
+    </div>
+  </div> 
+
+
+
+  <div class="animated fadeinup" style="padding-top:10px;">
+
+    <div class="todo-element card-vew">
+      <p class="hedview para"> Birth Day {{fromdate}}</p>
+
+      <div class="bg-img_br" ng-show="nolist">No Birthday</div>
+
+      <div ng-repeat = "list in birthdaylist" class="showpopup">
+        <div class="bg-img_br boredr-bot" ng-click="birthPop()">
+          <div class="img_box_new">
+            <img src="img/icon/img.png">
+          </div>
+          <!-- {{list}} -->
+          <div class="right_ving">
+            <span>HBD:</span><span> {{list.firstName+" "+list.lastName}}</span>
+          </div>
+        </div>
+
+        <div class="position_set" ng-show="birthpop">
+          <div class="card-vew padet">
+            <div class="hedview retway"><li>Send Wish</li><li class="ion-android-close" ng-click="closeBirthPop()"></li></div>
+            <div class="bg-img_br new_joiner" >
+              <div class="img_box_logo">
+                <img src="img/icon/img.png" alt="">
+              </div>
+              <div class="right_ving">
+                <div class="user_nm lty">{{list.firstName+" "+list.lastName}}</div>
+                <!-- <div class="lty">GTL-236</div> -->
+                <div class="lty">{{list.designation}}</div>
+                <!-- <div class="lty">Tech</div>
+                <div class="lty">8|8|2000</div> -->
+              </div>
+              
+                <div class="input-field " style="margin-bottom: -0.5rem;">
+                  <textarea id="textarea1" class="materialize-textarea under_lin" data-length="120">Dear {{list.firstName+" "+list.lastName}}, Wish you a Happy Birthday!</textarea>
+                </div>
+                <div><button class="but_ws" ng-click="wishBirtDay(list.empCode, list.firstName, list.officealEmail)"> Wish</button></div> 
+             
+            </div>
+          </div>
+        </div> 
+      </div>
+      <div class="view_more" ng-show="brthlist"><a href="#"> View More birthday</a></div>
+    </div>
+
+    <div class="animated fadeinup" style="padding-top:10px;">
+      <div class="todo-element card-vew">
+        <p class="hedview para"> New Joiner {{todate}}-{{fromdate}}</p>
+        <div class="bg-img_br new_join" ng-show="false">
+          <div class="img_box_new"></div>
+          <div class="right_ving">
+            <span>rejecteted:</span>
+            <span> shilesh diwaker</span>
+          </div>
+          <div class="right_ving_rt"><span>1/4/1995</span></div>
+        </div>
+        <div>No more lists</div>
+        <div class="view_more" ng-show="false"><a href="#"> View More list</a></div>
+      </div>
+    </div>
+    
+
+  </div> 
+  <!-- End of Page Contents -->
+
+
+
+   
+      <!-- Sidebars -->
+      <!-- Left Sidebar -->
+      <ul id="slide-out-left" class="side-nav collapsible">
+        <li class="sidenav-avatar bg-material">
+          <div class="opacity-overlay-gradient"></div>
+          <div class="bottom">
+            <div class="user_header" style="overflow: hidden;" ng-show="blankprofilepic">
+              <img src="img/icon/img.png">
+            </div>
+            <div class="user_header" style="overflow: hidden;" ng-hide="blankprofilepic">
+              <img ng-src="{{img_src}}">
+            </div>
+            <!-- Dropdown Trigger -->
+            <span class="dropdown-button waves-effect waves-light" data-activates="dropdown1"> {{logininfo[2]+" "+logininfo[3]}}<i class="ion-android-arrow-dropdown right"></i></span>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+              <li><a href="#!"> Dileep.com</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header waves-effect">
+            <i class=""><img src="img/icon/home.png"></i> <span class="nvt-wew">Home</span>  
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header waves-effect" ng-click="goProfile()">
+            <i class=""><img src="img/icon/username.png"></i> 
+            <span class="nvt-wew">My Profile</span>           
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header waves-effect" ng-click="goMobileDirectory()">
+            <i class=""><img src="img/icon/call_icon.png"></i> <span class="nvt-wew">Mobile Directory</span>  
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header waves-effect" ng-click="goFeedBack()">
+            <i class=""><img src="img/icon/payroll.png"></i> <span class="nvt-wew">Feedback</span>  
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header waves-effect" ng-click="goLeave()">
+            <i class=""><img src="img/icon/payroll.png"></i> <span class="nvt-wew">Leave</span>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header waves-effect" ng-click="goAttendance()">
+            <i class=""><img src="img/icon/date.png"></i> 
+            <span class="nvt-wew">Attendance</span>  
+          </div>
+        </li>
+        
+        <li>
+          <div class="collapsible-header waves-effect" ng-click="goChangePwd()">
+            <i class=""><img src="img/icon/ic_sidemenu_changepassword_normal.png"></i> <span class="nvt-wew">Change Password</span>  
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header waves-effect" ng-click="goHolidays()">
+            <i class=""><img src="img/Untitled-2.png"></i> <span class="nvt-wew">List Holidays</span>  
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header waves-effect">
+            <i class=""><img src="img/icon/logout_icon.png"></i> <span class="nvt-wew" ng-click="logout()">Log Out</span>  
+          </div>
+        </li>
+        
+    </div>
+
+    <div class="modal-content" ng-show="showpopup">
+      <p>your wish has been sent.</p>
+    </div>
+
+    <div id="overlay" ng-show="displayloader">
+      <span class="loading style-2"></span>
+    </div>
+
+
+    <!--  -->
+    <!-- <script src="js/main.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/vendor/jquery.smoothState.js"></script>
+    <script src="js/vendor/materialize.min.js"></script> -->
+      <script src="js/main.js"></script>
+
+
+    <script>
+// $(document).ready(function(){
+//     $(".retway>li:nth-child(2)").click(function(){
+//         $(".position_set").hide();
+//     });
+//     $(".showpopup").click(function(){
+//         $(".position_set").show();
+//     });
+// });
+</script>

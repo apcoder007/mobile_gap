@@ -1,0 +1,139 @@
+
+
+  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/punch.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<style type="text/css">
+  .mex{
+    margin-top: 110px;
+  }
+  body{
+    overflow-x: none;
+  }
+
+.macherlet>select{
+      font-size: 19px;
+    color: #6a6a6a;
+    /*width: 80%;*/
+    text-align: center;
+    border: 0px !important;
+    outline: none !important;
+    padding: 0px 5px;
+}
+ select option {
+    /*background-color: transparent;*/
+    background: transparent;
+     color: black;
+    border: transparent;
+    outline: none;
+}
+.font-ret{
+  font-size: 19px;
+    font-weight: 600;
+    font-style: initial;
+}
+.bg-imgrt{
+     background-image:url(img/icon/pdf.png);
+    padding-bottom: 95%;
+    background-size: 93px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Download{
+      padding: 14px;
+    background: #0178b6;
+    margin: 8px;
+    border-radius: 3px;
+    text-align: center;
+}
+.Download>a{
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+}
+</style>
+
+  <!-- Main Container -->
+  <div class="main">
+    <!-- Toolbar -->
+    <div class="transparent" id="toolbar">
+      <div class="open-left" data-activates="slide-out-left" id="open-left">
+        <i class="ion-android-arrow-back white-text"></i>
+      </div>
+      <div class="logo_div"><img class="logo_hd" src="img/logo.png"></div>
+      <div>
+        <h1 class="title white-text">Payrolls</h1>
+      </div>
+    </div>
+    <div class="marlet">
+      <div class="mach make vies1">
+         View 
+      </div>
+      <div class="mach vies2">
+        Download
+      </div>
+    </div>
+    </div>
+
+    <div class="sec_one mex" style="display: block;">
+    <div class="card-vew bg-imgrt">
+
+<p class="font-ret"> Select</p>
+<div class="macherlet">
+ <select>
+  <option value="volvo">Year</option>
+  <option value="saab">2016</option>
+  <option value="mercedes">2017</option>
+  <option value="audi">2018</option>
+</select>
+</div>
+<div class="macherlet">
+  <select>
+  <option value="volvo">Month</option>
+  <option value="saab">jan</option>
+  <option value="mercedes">Feb</option>
+  <option value="audi">March</option>
+  <option value="audi">April</option>
+  <option value="audi">Jun</option>
+  <option value="audi">July</option>
+   <option value="audi">sep</option>
+    <option value="audi">oct</option>
+     <option value="audi">nov</option>
+</select>
+</div>
+    </div>
+
+<div class="Download"><a href="#"> Download</a></div>
+
+    </div>
+
+    <div class="sec_two mex" style="display:none;">
+    Coming soon
+    </div>
+  </div><!-- End of Main Container -->
+  <!-- Scripts -->
+  <script type="text/javascript">
+   $(function() {
+
+  $('.mach').click(function(){
+     $('.mach').removeClass('make');
+     $(this).addClass('make');
+  }),
+  $('.vies1').click(function(){
+     $('.sec_one').css({"display": "block"}),
+     $('.sec_two').css({"display": "none"});
+
+  }),
+
+  $('.vies2').click(function(){
+     $('.sec_one').css({"display": "none"}),
+     $('.sec_two').css({"display": "block"});
+
+  });
+  });
+  </script> 

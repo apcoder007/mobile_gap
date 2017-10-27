@@ -1,0 +1,55 @@
+application: gapapi-1991
+version: 10
+runtime: python27
+threadsafe: true
+api_version: 1
+
+handlers:
+
+- url: /
+  static_files: index.html
+  upload: index\.html
+
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /includes
+  static_dir: includes
+
+- url: /js
+  static_dir: js
+
+- url: /css
+  static_dir: css
+
+- url: /img
+  static_dir: image
+
+- url: /fonts
+  static_dir: fonts
+
+- url: /views
+  static_dir: views
+
+
+- url: /api/.*
+  script: api.app
+
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+
+- name: jinja2
+  version: latest
+  
+- name: pycrypto
+  version: "2.6"
+
+- name: MySQLdb
+  version: "latest"
+
+
+inbound_services:
+- warmup

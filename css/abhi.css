@@ -1,0 +1,156 @@
+body{
+    background: #f5f5f5;
+    font-family: 'PT Serif', serif;
+  }
+     .logo_hd{
+      width: 31px;
+    margin: auto;
+    /* top: 14px; */
+    margin-top: 11px;
+    padding-left: 0px;
+     }
+
+     .logo_div{
+      padding:0px 30px;
+     }
+     .white-text{
+      font-family:inherit !important;
+     }
+     .user_header{
+     height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: red;
+    position: relative;
+    left: 16px;
+    background: url(image/3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+     }
+.nvt-wew{
+  padding: 0px 10px;
+    font-size: 17px;
+    font-family: inherit;
+    font-weight: 400;
+}
+
+.white-text{
+      font-family:inherit !important;
+      color: #ffffff !important;
+      font-family: 'Roboto', sans-serif !important;
+}
+.nvt-wew{
+  font-family:inherit !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+.card-vew{
+    background: #ffffff;
+    padding: 6px 10px;
+    margin: 2px 9px;
+    border-radius:6px;
+    /* border: 1px solid black; */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.bg-img{
+  padding: 5px 0px;
+    background: url(/image/icon/list.png);
+    background-position: 336px 9px;
+    background-position-top: 0;
+    background-size: 18px;
+    background-repeat: no-repeat;
+}
+
+.bg-img_br{
+  padding: 14px 0px;
+    background: url(/image/icon/birthday-cake.png);
+    background-position:332px 9px;
+    background-position-top: 0;
+    background-size: 26px;
+    background-repeat: no-repeat;
+}
+
+.view_more{
+      text-align: right;
+    padding-right: 20px;
+    font-size: 13px;
+}
+.view_more a{
+  font-family: 'PT Serif', serif;
+}
+.hedview{
+  font-size:18px;
+  color: #0077b5;
+  font-family: 'PT Serif', serif;
+  font-weight: lighter;
+}
+.img_box_new{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: url(/image/user3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  float: left;
+
+} 
+
+.right_ving{
+      display: inline-block;
+    float: left;
+    padding-top: 7px;
+    padding-left: 12px;
+}
+.right_ving_rt{
+    display: inline-block;
+    float:right;
+    padding-top: 7px;
+    padding-right: 12px;
+}
+
+.right_ving>span:nth-child(1),.bg-img>p> span:nth-child(1){
+  color: black;
+  font-family: 'PT Serif', serif;
+  font-weight: lighter;
+}
+.right_ving>span:nth-child(2),.bg-img>p> span:nth-child(2){
+   
+  font-family: 'PT Serif', serif;
+   font-weight: lighter;
+}
+.bg-img_br:after{
+height: 0;
+display: block;
+content: "";
+clear: both;
+}
+
+.boredr-bot{
+  border-bottom: 0.5px solid #b0b0b0; 
+}
+
+
+/* Makes images fully responsive */
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-indicators li {
+  border: 1px solid #024263 !important;
+  background: #ccc;
+
+}
+
+.new_join{
+  background-image: none;
+}

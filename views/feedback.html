@@ -1,0 +1,290 @@
+<style type="text/css">
+  body{
+    background: #f5f5f5;
+    overflow-x: none;
+    -webkit-overflow-x: none;
+  }
+  .logo_hd{
+    width: 31px;
+    margin: auto;
+    margin-top: 11px;
+    padding-left: 0px;
+  }
+  .logo_div{
+    padding:0px 30px;
+  }
+  .white-text{
+    font-family:inherit !important;
+    color: #ffffff !important;
+    font-family: 'Roboto', sans-serif !important;
+  }
+  .user_header{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: red;
+    position: relative;
+    left: 16px;
+    background: url(img/3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .nvt-wew{
+    padding: 0px 10px;
+    font-size: 17px;
+    font-family: inherit;
+    font-weight: 400;
+  }
+  .card-vew{
+    background: #ffffff;
+    padding: 6px 10px;
+    margin: 2px 9px;
+    border-radius:6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  .input-field {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    margin: auto;
+  }
+  textarea.materialize-textarea {
+    overflow-y: hidden;
+    padding: 4px 6px;
+    resize: none;
+    width: 85%;
+    min-height: 3rem;
+    font-weight: lighter;
+    border: none;
+    border-bottom: 0.5px solid black;
+    outline: none;
+  }
+  .subm{
+    padding:10px;
+    background: #0178b6;
+    margin: 8px 20px;
+    border-radius: 3px;
+    text-align: center;
+  }
+  .subm>button{
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    background: transparent;
+    border: transparent;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .how_do{
+    color: #0583c5;
+    padding: 10px;
+  }
+  .img-sec>img{
+    width:77px;
+    margin: auto;
+    text-align: center;
+  }
+  .img-sec{
+    padding: 17px 0px;
+    text-align: center;
+  }   
+  .img-sec>p{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .view-nr{
+    padding: 0px 51px;
+  }
+  #sidenav-overlay {
+    position:inherit;
+    height: 0vh;
+     background-color: rgba(0,0,0,0) !important; 
+    z-index:1;
+    will-change: opacity;
+}
+  .awesome{background-image:url(img/icon/ic_awesome_selected.png);}
+.happy{background-image:url(img/icon/ic_happy_selected.png);}
+.unsure{background-image:url(img/icon/ic_unsure_selected.png);}
+.upset{background-image:url(img/icon/ic_upset_selected.png);}
+.love{background-image:url(img/icon/ic_love_selected.png);}
+</style>
+
+<style type="text/css">
+  .cc-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+.visa{background-image:url(http://i.imgur.com/lXzJ1eB.png);}
+.mastercard{background-image:url(http://i.imgur.com/SJbRQF7.png);}
+
+.cc-selector input:active +.drinkcard-cc{opacity: .9;}
+.cc-selector input:checked +.drinkcard-cc{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+.drinkcard-cc, .viewmt{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:100px;height:70px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1) grayscale(1) opacity(.7);
+            filter: brightness(1) grayscale(1) opacity(.7);
+}
+.drinkcard-cc:hover, .drinkcard-cc:hover{
+    -webkit-filter: brightness(1) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1) grayscale(.5) opacity(.9);
+            filter: brightness(1) grayscale(.5) opacity(.9);
+            font-weight: bold;
+}
+
+/* Extras */
+a:visited{color:#888}
+a{color:#444;text-decoration:none;}
+p{margin-bottom:.3em;}
+
+[type="radio"]:not(:checked)+label, [type="radio"]:checked+label {
+    position: static;
+  }
+
+
+
+  [type="radio"]:not(:checked)+label, [type="radio"]:checked+label {
+    height: 120px;
+    text-align: center; 
+  }
+  [type="radio"]:not(:checked)+label:before, [type="radio"]:not(:checked)+label:after{
+    border: none !important;
+  }
+
+  .drinkcard-cc p{
+    color: black;
+    margin-top: 150%;
+  }
+  .awesome p{
+    margin-left: -25%;
+  }
+
+
+  [type="radio"]+label:before, [type="radio"]+label:after{
+    display: none;
+  }
+  
+</style>
+
+<style>
+/* The Modal (background) */
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    text-align: center;
+    position: fixed;
+    top: 45%;
+    left: 0;
+    right: 0;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+  
+<div class="main">
+  <div class="transparent" id="toolbar">
+    <div class="open-left waves-effect" data-activates="slide-out-left" id="open-left" ng-click="goHome()">
+      <i class="ion-android-arrow-back white-text"></i>
+    </div>
+    <div class="logo_div"><img class="logo_hd" src="img/logo.png"></div>
+    <div>
+      <h1 class="title white-text">Feedback</h1>
+    </div>
+  </div>
+  <!-- <div style="clear:both;display: block;"></div> -->
+  <form ng-submit="feedBackSubmit(emotion,emotiontext)">
+  <div class="animated fadeinup" style="padding-top:59px;">
+    <div>
+      <p class="how_do">How do you fill about Gap worklife</p>
+    </div>
+    <div class="Container view-nr">
+
+      <div class="cc-selector">
+        
+        <div class="row">
+          <div class="col-xs-6">
+            <input id="awesome" type="radio" ng-model="emotion" name="emotion" value="Awesome" />
+            <label class="drinkcard-cc awesome" for="awesome"><p class="viewmt">Awesome</p></label>     
+          </div>
+          <div class="col-xs-6">
+            <input id="happy" type="radio" ng-model="emotion" name="emotion" value="Happy" />
+            <label class="drinkcard-cc happy" for="happy"><p class="viewmt">Happy</p></label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6">
+            <input id="unsure" type="radio" ng-model="emotion" name="emotion" value="Unsure" />
+          <label class="drinkcard-cc unsure" for="unsure"><p class="viewmt">Unsure</p></label>
+          </div>
+          <div class="col-xs-6">
+            <input id="upset" type="radio" ng-model="emotion" name="emotion" value="Upset" />
+          <label class="drinkcard-cc upset" for="upset"> <p class="viewmt">Upset</p></label>
+          </div>
+        </div>
+
+       <div class="row">
+         <div class="col-xs-6 col-xs-offset-3">
+            <input id="love" type="radio" ng-model="emotion" name="emotion" value="Love" />
+          <label class="drinkcard-cc love" for="love"> <p  class="viewmt">Love</p></label> 
+         </div>
+       </div>
+
+    </div>
+
+    </div>
+  </div>
+  <div class="input-field under_lin" ng-show="emotion">
+    <textarea class="materialize-textarea" data-length="120" id="textarea1" placeholder="Emp Note" ng-model="emotiontext"></textarea>
+  </div>
+  <div class="subm">
+    <button>submit</button>
+  </div>
+</form>
+</div>
+
+<!-- Modal content -->
+  <div class="modal-content" ng-show="showpopup">
+    <p>{{message}}</p>
+  </div>
+    
+    
+      
+    
+
+
+  
+
